@@ -52,6 +52,7 @@ if user_input != "":
         input_text = input_first_half + input_second_half
 
         if st.button("Run"):
+            # TODO: Add I want you to act as a sys input
             write_col1, write_col2, write_col3 = st.columns([1, 1, 1])
             output = get_completion(input_text, model)
             write_col1.write(output)
