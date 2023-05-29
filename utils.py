@@ -7,25 +7,13 @@ nltk.download('wordnet')
 nltk.download('stopwords')
 
 prompts_df = pd.read_csv("model/prompts.csv")
-input_prompts = prompts_df["act"]  # used in streamlit interface
 
-
-def GPT_paraphrase(Input_prompt, model):
-    response = openai.ChatCompletion.create(
-        model=model,
-        messages=[
-            {"role": "system",
-             "content": "You will act as an advanced language model. The user wants you to paraphrase the provided input prompt to generate an ideal output."},
-            {"role": "user", "content": Input_prompt}
-        ],
-        temperature=0,
-    )
-    return response.choices[0].message["content"]
-
+# showing only those prompts, which start with 'act' in the first sentence
+input_prompts = prompts_df[prompts_df["prompt"].apply(lambda x: "act" in x.split(".")[0].lower())]["act"]
 
 def get_completion(
         prompt,
-        system_prompt="You will act as an advanced language model. The user wants you to simulate the experience of interacting with the provided prompt.",
+        system_prompt="You will act as an advanced language model. You will be given an input prompt from a user, your task is just to paraphrase the prompt, don't do anything else.",
         model="gpt-3.5-turbo"):
     """
     This function servers as a portal into Gpt API

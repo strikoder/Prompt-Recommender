@@ -1,9 +1,20 @@
-import streamlit as st
-from streamlit_ace import st_ace
 import openai
-from utils import input_prompts, get_completion, get_ideal_prompt
+import streamlit as st
+from utils import input_prompts, get_ideal_prompt, print_outputs
 
-# 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
+
+
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+            
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 st.title('Act as GPT')
 
@@ -34,7 +45,7 @@ if user_input != "":
     modified_input = get_ideal_prompt(user_input)
     sentences = modified_input.split(".")
 
-    # TODO: Debug all the dataset (gpt prompt generator)
+    # TODO: Debug all the dataset (gpt prompt generator+note taking+cheap+financial)
 
     # Find the last sentence containing the word "first"
     for sentence in reversed(sentences):
@@ -45,18 +56,13 @@ if user_input != "":
             sentences_counter -= 1
 
     if last_sentence:
-        input_first_half = ". ".join(sentences[:sentences_counter]) + "."
-        st.write(input_first_half)
+        system_prompt = ". ".join(sentences[:1]) + "."
+        input_text = ". ".join(sentences[1:sentences_counter]) + "." + last_sentence
         # Create a reactive text area with live update
-        input_second_half = st.text_area("modified_input", value=last_sentence + ".", key="text_area")
-        input_text = input_first_half + input_second_half
+        input_area = st.text_area("modified_input", value=input_text, key="text_area", height=200)
 
-        if st.button("Run"):
-            # TODO: Add I want you to act as a sys input
-            write_col1, write_col2, write_col3 = st.columns([1, 1, 1])
-            output = get_completion(input_text, model)
-            write_col1.write(output)
-            output = get_completion(input_text, model)
-            write_col2.write(output)
-            output = get_completion(input_text, model)
-            write_col3.write(output)
+        but_col1, _, _, but_col2 = st.columns([1, 1, 1, 1])
+        write_col1, write_col2, write_col3 = st.columns([1, 1, 1])
+
+        if but_col1.button("Run"):
+            print_outputs(input_area, system_prompt, model, write_col1, write_col2, write_col3)
