@@ -42,4 +42,3 @@ if user_input != "":
 
     if but_col1.button("Run"):
         print_outputs(input_area, user_input, model, write_col1, write_col2, write_col3)
-# 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
