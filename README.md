@@ -47,10 +47,7 @@ In the initial version, the model utilized cosine similarity, limiting its abili
 ![result1](imgs/readme2.JPG)
 ![result2](imgs/readme2.1.JPG)
 ![result3](imgs/readme2.2.JPG)
-![result4](imgs/readme2.3.JPG)
-![result5](imgs/readme2.4.JPG)
-![result6](imgs/readme2.5.JPG)
-![result7](imgs/readme2.6.JPG)
+
 
 
 
