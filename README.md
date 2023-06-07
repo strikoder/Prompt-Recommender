@@ -43,6 +43,7 @@ The website features a simple and intuitive interface that enables users to inpu
 
 ## Improved Results
 In the initial version, the model utilized cosine similarity, limiting its ability to predict prompts similar to those in the existing database, making it inefficient for real-time tasks. To address this, we fine-tuned a transformer model, primarily developed by [Merve](https://github.com/merveenoyan), to cater to our specific task. Additionally, the model was uploaded to the cloud using AWS.
+
 ![result1](imgs/readme2.JPG)
 ![result2](imgs/readme2.1.JPG)
 ![result3](imgs/readme2.2.JPG)
