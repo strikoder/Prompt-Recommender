@@ -1,6 +1,7 @@
 # ActasGPT
  
-ActasGPT is a project aimed at enhancing prompt prediction using the cosine_similarity & transformers methods. This program focuses on developing a model capable of predicting optimal prompts for users, extending beyond the existing database.
+ActasGPT is a project that aims to improve prompt prediction by utilizing the cosine_similarity(v1.0) and transformers(v2.0) techniques. The main objective of this project is to create a model that can accurately predict the most effective prompts for users, going beyond the limitations of the current database.
+The transformer model is further refined and integrated into the project as part of a third-year project initiative.
 
 ## Table of Contents
 * [Dataset](#Dataset)
