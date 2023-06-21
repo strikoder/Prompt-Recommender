@@ -2,6 +2,7 @@
  
 ActasGPT is a project that aims to improve prompt prediction by utilizing the cosine_similarity(v1.0) and transformers(v2.0) techniques. The main objective of this project is to create a model that can accurately predict the most effective prompts for users, going beyond the limitations of the current database.
 The transformer model is further refined and integrated into the project as part of a third-year project initiative.
+To launch this project, simply add your own generative model and GPT-API key.
 
 ## Table of Contents
 * [Dataset](#Dataset)
@@ -48,8 +49,6 @@ In the initial version, the model utilized cosine similarity, limiting its abili
 ![result1](imgs/readme2.JPG)
 ![result2](imgs/readme2.1.JPG)
 ![result3](imgs/readme2.2.JPG)
-
-
 
 
 # Conclusion
