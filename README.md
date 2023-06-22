@@ -2,7 +2,8 @@
  
 ActasGPT is a project that aims to improve prompt prediction by utilizing the cosine_similarity(v1.0) and transformers(v2.0) techniques. The main objective of this project is to create a model that can accurately predict the most effective prompts for users, going beyond the limitations of the current database.
 The transformer model is further refined and integrated into the project as part of a third-year project initiative.
-To launch this project, simply add your own generative model and GPT-API key.
+
+To kickstart this project, you'll need to incorporate your own generative model and GPT-API key. Once these are in place, simply navigate to the project directory in your console and execute the command `streamlit run app.py`.
 
 ## Table of Contents
 * [Dataset](#Dataset)
