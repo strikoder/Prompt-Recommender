@@ -1,9 +1,6 @@
 # ActasGPT
  
-ActasGPT is a project that aims to improve prompt prediction by utilizing the cosine_similarity(v1.0) and transformers(v2.0) techniques. The main objective of this project is to create a model that can accurately predict the most effective prompts for users, going beyond the limitations of the current database.
-The transformer model is further refined and integrated into the project as part of a third-year project initiative.
-
-To kickstart this project, you'll need to incorporate your own generative model and GPT-API key. Once these are in place, simply navigate to the project directory in your console and execute the command `streamlit run app.py`.
+ActasGPT is an innovative project that leverages cosine_similarity(v1.0) and transformers(v2.0) techniques to enhance prompt prediction. The primary goal is to develop a model capable of accurately predicting highly effective prompts for users, surpassing the limitations of the current database. As part of a third-year project initiative, the transformer model is refined and seamlessly integrated. To launch this project, all you need to do is incorporate your own generative model and GPT-API key.
 
 ## Table of Contents
 * [Dataset](#Dataset)
@@ -21,12 +18,12 @@ The project utilizes the remarkable chatgpt prompts dataset:
 The dataset comprises two columns: the input column, which acts as a prompt, and the output column.
 
 ## Repo Structure
-The project has the following folders and files:
+The project consists of the following folders and files:
 
-- imgs: includes images for the readme file
-- model: houses the transformer model, the utilized dataset, and the notebooks used for training both the recent and initial versions of the program
-- app.py: handles the website interface
-- utils.py: provides the backend for the website, including the necessary functions and API calls
+- imgs: Contains images for the readme file.
+- model: Houses the transformer model, the utilized dataset, and the notebooks used for - training both the recent and initial versions of the program.
+- app.py: Manages the website interface.
+- utils.py: Provides the backend for the website, encompassing essential functions and API calls.
 
 
 ## Technologies Used
@@ -38,7 +35,7 @@ The project has the following folders and files:
 * Amazon EC2 for cloud hosting
 
 ## Website Interface
-The website features a simple and intuitive interface that enables users to input a prompt and receive predictions for the most suitable prompt that aligns with their request. The transformer model predicts the most appropriate prompt, which the user can then edit before final submission. Upon submission, the server connects with the GPT-API server and returns three different results, providing the user with a general idea of the prompt output and its efficiency.
+The website boasts a user-friendly and intuitive interface, allowing users to enter prompts and receive predictions for the most suitable ones that cater to their specific needs. The transformer model accurately predicts the optimal prompt, which users can conveniently modify before submitting. Upon submission, the server establishes a connection with the GPT-API server, delivering three distinct results that offer users a comprehensive overview of the prompt's output and effectiveness.
 
 ### Old version:
 ![Interface V1.0](imgs/readme1.JPG)
@@ -52,7 +49,8 @@ In the initial version, the model utilized cosine similarity, limiting its abili
 ![result3](imgs/readme2.2.JPG)
 
 
-# Conclusion
+## Conclusion
 This project successfully improves user input prompts, providing users with the opportunity to modify the generated prompt before submitting it to the GPT-API server. The resulting prompt outputs are then displayed, enhancing the prompt selection process.
 
-
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
