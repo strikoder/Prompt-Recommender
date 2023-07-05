@@ -53,4 +53,4 @@ In the initial version, the model utilized cosine similarity, limiting its abili
 This project successfully improves user input prompts, providing users with the opportunity to modify the generated prompt before submitting it to the GPT-API server. The resulting prompt outputs are then displayed, enhancing the prompt selection process.
 
 ## License
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU  License. See `LICENSE` for more information.
