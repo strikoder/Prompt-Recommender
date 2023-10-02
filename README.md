@@ -1,4 +1,4 @@
-# ActasGPT
+# Prompt Recommender (ActasGPT)
  
 ActasGPT is an innovative project that leverages cosine_similarity(v1.0) and transformers(v2.0) techniques to enhance prompt prediction. The primary goal is to develop a model capable of accurately predicting highly effective prompts for users, surpassing the limitations of the current database. As part of a third-year project initiative, the transformer model is refined and seamlessly integrated. To launch this project, all you need to do is incorporate your own generative model and GPT-API key.
 
